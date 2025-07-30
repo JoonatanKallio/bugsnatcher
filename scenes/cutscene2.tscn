@@ -1,0 +1,252 @@
+[gd_scene load_steps=14 format=3 uid="uid://45ob63psux7t"]
+
+[ext_resource type="Texture2D" uid="uid://b36tifp8oxb7s" path="res://backgroundworld.png" id="1_6neoj"]
+[ext_resource type="Script" uid="uid://4fo7cj475jef" path="res://scenes/cutscene_2.gd" id="1_veqdg"]
+[ext_resource type="Texture2D" uid="uid://df3ctvj50o36r" path="res://shirt.png" id="2_veqdg"]
+[ext_resource type="Texture2D" uid="uid://mjxddrosipwp" path="res://dudestanding.png" id="3_45syc"]
+
+[sub_resource type="Animation" id="Animation_6neoj"]
+resource_name = "new_animation"
+length = 11.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/AnimatedSprite2D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/AnimatedSprite2D:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(941, -0.25, 0, 0.25, 0, 936, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/AnimatedSprite2D:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-88, -0.25, 0, 0.25, 0, 409, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 4)
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/RichTextLabel:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.81, 7.93),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/Sprite2D:position:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(677, -0.25, 0, 0.25, 0, 1328, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(4.04, 7.03)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/Sprite2D:position:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(464, -0.25, 0, 0.25, 0, 436, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(4.04, 7.03)
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/RichTextLabel2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 7.93),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_veqdg"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/AnimatedSprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(941, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/AnimatedSprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-88, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/RichTextLabel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/Sprite2D:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(677, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/Sprite2D:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(464, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/RichTextLabel2:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_veqdg"]
+_data = {
+&"RESET": SubResource("Animation_veqdg"),
+&"new_animation": SubResource("Animation_6neoj")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6qrf"]
+atlas = ExtResource("2_veqdg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bum18"]
+atlas = ExtResource("2_veqdg")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a03xv"]
+atlas = ExtResource("2_veqdg")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upo1j"]
+atlas = ExtResource("2_veqdg")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ey1ab"]
+atlas = ExtResource("2_veqdg")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aq8qo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6qrf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bum18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a03xv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_upo1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ey1ab")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimationPlayer" type="AnimationPlayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_veqdg")
+}
+autoplay = "new_animation"
+script = ExtResource("1_veqdg")
+
+[node name="Backgroundworld" type="Sprite2D" parent="."]
+position = Vector2(589, 328)
+scale = Vector2(1.04514, 1.05247)
+texture = ExtResource("1_6neoj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(941, -88)
+scale = Vector2(3.51563, 3.3125)
+sprite_frames = SubResource("SpriteFrames_aq8qo")
+autoplay = "default"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(677, 464)
+scale = Vector2(7.425, 8.78125)
+texture = ExtResource("3_45syc")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 28.0
+offset_top = 258.0
+offset_right = 730.0
+offset_bottom = 520.0
+theme_override_font_sizes/normal_font_size = 32
+text = "I found my shirt! I defeated all the bugs!!!!"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 451.0
+offset_top = 235.0
+offset_right = 1153.0
+offset_bottom = 497.0
+theme_override_font_sizes/normal_font_size = 42
+text = "VICTORY"
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

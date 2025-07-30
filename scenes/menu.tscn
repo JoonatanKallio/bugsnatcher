@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://cda1hdkxu4vpo"]
+
+[ext_resource type="Script" uid="uid://cdyjpppdhcmtr" path="res://scenes/menu.gd" id="1_yqeox"]
+[ext_resource type="Texture2D" uid="uid://bjtacqfq8cs8q" path="res://background.png" id="2_vjb58"]
+[ext_resource type="AudioStream" uid="uid://cwupb4su0q1u4" path="res://menubackgroundmusic.mp3" id="3_con2f"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqeox")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(575, 324)
+texture = ExtResource("2_vjb58")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 410.0
+offset_right = 393.0
+offset_bottom = 636.0
+alignment = 1
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_con2f")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

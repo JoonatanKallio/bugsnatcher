@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://dcawxk0ochilh"]
+
+[ext_resource type="Script" uid="uid://c4eureu4iaura" path="res://scenes/spider.gd" id="1_algeo"]
+[ext_resource type="Texture2D" uid="uid://dad38tu0luem" path="res://spider-sheet.png" id="2_algeo"]
+[ext_resource type="AudioStream" uid="uid://cruu453eskvlt" path="res://death.mp3" id="3_k5hg5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5hg5"]
+atlas = ExtResource("2_algeo")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d613k"]
+atlas = ExtResource("2_algeo")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_evcmw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5hg5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d613k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_algeo"]
+size = Vector2(171.625, 87.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5hg5"]
+size = Vector2(176.5, 87.5)
+
+[node name="spider" type="CharacterBody2D" groups=["enemy"]]
+position = Vector2(487, 560)
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_algeo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(364, -42)
+scale = Vector2(3.34375, 4.52734)
+sprite_frames = SubResource("SpriteFrames_evcmw")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(362, 21)
+shape = SubResource("RectangleShape2D_algeo")
+
+[node name="Area2D" type="Area2D" parent="." groups=["enemy"]]
+collision_layer = 4
+collision_mask = 11
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(360, 21)
+shape = SubResource("RectangleShape2D_k5hg5")
+debug_color = Color(0.938657, 1.32841e-05, 0.62275, 0.42)
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_k5hg5")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

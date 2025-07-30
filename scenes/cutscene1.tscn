@@ -1,0 +1,295 @@
+[gd_scene load_steps=8 format=3 uid="uid://bvf5yfhmfrcr3"]
+
+[ext_resource type="Script" uid="uid://ct2bjet5kl2d4" path="res://cutscene_1.gd" id="1_isedj"]
+[ext_resource type="Texture2D" uid="uid://b36tifp8oxb7s" path="res://backgroundworld.png" id="2_1fxw1"]
+[ext_resource type="Texture2D" uid="uid://mjxddrosipwp" path="res://dudestanding.png" id="3_700ic"]
+[ext_resource type="Texture2D" uid="uid://ba2rkuaxgfjj1" path="res://spider1.png" id="4_jirhm"]
+
+[sub_resource type="Animation" id="Animation_xu8v7"]
+resource_name = "new_animation"
+length = 17.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(159, -0.25, 0, 0.25, 0, 159, -0.25, 0, 0.25, 0, 837, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.8, 9.67308)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(163, -0.25, 0, 0.25, 0, 163, -0.25, 0, 0.25, 0, 171, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 3, 9.67308)
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/Sprite2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0, 0.0, 0.0, 0.0],
+"method": &"draw_animation_slice"
+}]
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/enemy:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(877, -0.25, 0, 0.25, 0, 858, -0.25, 0, 0.25, 0, 364, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 7.13, 9.64)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/enemy:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(-201, -0.25, 0, 0.25, 0, -205, -0.25, 0, 0.25, 0, -60, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 7.13, 9.64)
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/RichTextLabel:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/RichTextLabel2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.02, 10, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationPlayer/Sprite2D:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationPlayer/enemy:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationPlayer/RichTextLabel3:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 11.94, 17),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, true]
+}
+
+[sub_resource type="Animation" id="Animation_7vpm8"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Sprite2D:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(159, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Sprite2D:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(163, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationPlayer/enemy:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(877, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimationPlayer/enemy:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-201, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationPlayer/RichTextLabel:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationPlayer/RichTextLabel2:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationPlayer/Sprite2D:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AnimationPlayer/enemy:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AnimationPlayer/RichTextLabel3:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iq8bq"]
+_data = {
+&"RESET": SubResource("Animation_7vpm8"),
+&"new_animation": SubResource("Animation_xu8v7")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_iq8bq")
+}
+autoplay = "new_animation"
+script = ExtResource("1_isedj")
+
+[node name="Backgroundworld" type="Sprite2D" parent="."]
+position = Vector2(24, 1)
+scale = Vector2(1.04514, 1.05247)
+texture = ExtResource("2_1fxw1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(159, 163)
+scale = Vector2(9.08262, 11.4834)
+texture = ExtResource("3_700ic")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -509.0
+offset_top = -67.0
+offset_right = -152.0
+offset_bottom = 97.0
+text = "Where did I leave my favourite shirt? Hmm.."
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+visible = false
+offset_left = -153.0
+offset_top = -70.0
+offset_right = 204.0
+offset_bottom = 94.0
+theme_override_font_sizes/bold_italics_font_size = 55
+theme_override_font_sizes/italics_font_size = 55
+theme_override_font_sizes/mono_font_size = 55
+theme_override_font_sizes/normal_font_size = 42
+theme_override_font_sizes/bold_font_size = 55
+text = "bug snatchers"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 106.0
+offset_top = -41.0
+offset_right = 463.0
+offset_bottom = 123.0
+text = "ARRGHHH"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="enemy" type="Sprite2D" parent="."]
+position = Vector2(877, -201)
+scale = Vector2(8.25, 6.90625)
+texture = ExtResource("4_jirhm")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]
